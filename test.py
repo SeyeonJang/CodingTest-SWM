@@ -1,22 +1,15 @@
 # 그리디
-# 실전 3-2. 큰 수의 법칙
-# 문제 풀이 32' 29" (제한 풀이 시간 2분 29초 over)
+# 실전 3-3. 숫자 카드 게임
+# 문제 풀이 20' 40"
 
-n, m, k = input().split()  #input.split() 인터넷 봄
-n = int(n)
-m = int(m)
-k = int(k)
+n, m = map(int, input().split())
+arr = [[0 for col in range(n)] for row in range(m)]  # 배열 선언법 구글링함
+print("done")
 
-arr = list(map(int, input().split()))  #list, map 인터넷봄
-arr.sort(reverse=True) #sort 인터넷 봄
-print(arr)
+for i in range(n):
+  arr[i] = list(map(int, input().split()))
+  arr[i].sort()
+  print(arr[i][0], arr[i][1], arr[i][2])
 
-sum = 0
-for i in range(m):
-  if (i+1) % (k+1) == 0:
-    sum += arr[1]
-  else:
-    sum += arr[0]
-  print("합"+str(sum))
-
-print(sum)
+arr.sort(reverse=True)
+print(arr[0][0])
