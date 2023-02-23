@@ -9,9 +9,9 @@ b = list(map(int, input().split()))
 for i in range(k):
   a.sort()
   b.sort()
-  if a[0] > b[n-1]: break
+  if a[0] > b[n - 1]: break
 
-  a[0], b[n-1] = b[n-1], a[0]
+  a[0], b[n - 1] = b[n - 1], a[0]
 
 print(sum(a))
 
